@@ -1,3 +1,31 @@
+// SIMPLEST CODE
+
+const groupAnagrams = (val) => {
+    const map = {};
+  
+    for (let key of val) {
+      const sortedStr = key.split("").sort().join("");
+  
+      if (!map[sortedStr]) {
+        map[sortedStr] = [key];
+      } else {
+        map[sortedStr].push(key);
+      }
+    }
+    return map;
+  };
+  
+  // [ 'aet', 'aet', 'ant', 'aet', 'ant', 'abt' ]
+  
+  // ["bat"],["nat","tan"],["ate","eat","tea"]]
+  
+  const arr = ["eat", "tea", "tan", "ate", "nat", "bat"];
+  
+  console.log(groupAnagrams(arr));
+
+
+
+
 //  MY ACCEPTED CODE
 
 const sortStr = (val) => {

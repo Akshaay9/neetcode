@@ -17,3 +17,21 @@ var isSubsequence = function (s, t) {
     }
     return totalLen === 0;
   };
+
+  // BETTER SOLUTION
+
+  var isSubsequence = function (s, t) {
+    let i = 0;
+    let j = 0;
+    while (i < s.length && j < t.length) {
+      const currS = s[i];
+      const currT = t[i];
+      if (currS === currT) {
+        i += 1;
+        j += 1;
+      } else {
+        j += 1;
+      }
+    }
+    return i === 1;
+  };

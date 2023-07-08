@@ -1,3 +1,5 @@
+https://leetcode.com/problems/find-pivot-index/submissions/989140588/
+
 const getSum = (arr, startIdx, endIdx) => {
     let result = 0;
     for (let i = startIdx; i <= endIdx; i++) {
